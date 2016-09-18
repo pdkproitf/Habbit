@@ -17,7 +17,7 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
-    @categories = Category.all.map { |e| [e.name, e.id]  }
+    @categories = Category.all
   end
 
   def create
@@ -30,7 +30,7 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @categories = Category.all.map { |e| [e.name, e.id]  }
+    @categories = Category.all
   end
 
   def update
